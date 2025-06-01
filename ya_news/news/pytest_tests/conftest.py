@@ -15,7 +15,6 @@ def new_item():
         title='Заголовок',
         text='Текст новости',
     )
-    # return reverse('news:detail', args=(new_item.id,))
     return new_item
 
 
@@ -81,7 +80,6 @@ def new_x_comment(new_item, commentator):
         )
         comment.created = now + timedelta(days=index)
         comment.save()
-    return new_item.id
 
 
 @fixture
