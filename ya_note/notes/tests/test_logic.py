@@ -91,7 +91,7 @@ class TestNoteCreation(TestBaseNotePage):
         self.assertEqual(self.note.title, note_from_db.title)
         self.assertEqual(self.note.text, note_from_db.text)
         self.assertEqual(self.note.slug, note_from_db.slug)
-        self.assertEqual(self.note.author, self.author)
+        self.assertEqual(self.note.author, note_from_db.author)
 
     def test_author_can_delete_note(self):
         notes_count = Note.objects.count()
